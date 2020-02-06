@@ -31,4 +31,21 @@ class App < Sinatra::Base
     "#{@word1} #{@word2} #{@word3} #{@word4} #{@word5}."
   end
 
+  get '/:operation/:number1/:number2' do 
+    @operation = params[:operation]
+    @x = params[:number1].to_i 
+    @y = params[:number2].to_i
+
+    case @operation 
+    when "add"
+      "#{@x + @y}"
+    when "subtract"
+      "#{@x - @y}"
+    when "multiply"
+      "#{@x * @y}"
+    when "divide"
+      "#{@x / @y}"
+    end 
+  end   
+
 end
