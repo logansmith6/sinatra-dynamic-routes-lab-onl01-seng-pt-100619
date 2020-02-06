@@ -19,7 +19,7 @@ class App < Sinatra::Base
     @phrase = params[:phrase]
     @x = @number.to_i
 
-    @x.times("#{@number}")
+    (@x + 1).times("#{@number}")
      #{}"#{@number * @x}"
   end
 
