@@ -20,7 +20,7 @@ class App < Sinatra::Base
     @x = @number.to_i + 1
 
 
-     "#{@number * @x}"
+     "#{@phrase * @x}"
   end
 
 end
